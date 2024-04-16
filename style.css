@@ -1,0 +1,506 @@
+/* CSS Reset / Normalize */
+/* Vamos começar com o básico de reset de estilos. Se quiser adicionar mais informações,
+   coloque nas sessões indicadas */
+
+   :root {
+    /* Insira a variável para outras cores inspecionando o modelo do figma.
+       Esforçar-se para trabalhar com variáveis é uma dica profissional valiosa */
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
+    --cor-destaque: #FF4500;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/* Sessão Menu */
+section.menu {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.menu__title {
+    color: var(--cor-de-link);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove as margens padrão da lista */
+}
+
+.menu__list__item {
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.menu__list__item:last-child {
+    margin-right: 0; /* Remove o espaço à direita do último item do menu */
+}
+
+
+.menu__list__item a {
+    color: var(--cor-de-link);
+    font-size: 18px;
+}
+
+.menu__list__item a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Sessão Title */
+section.title {
+    text-align: center;
+    padding: 40px 0;
+}
+.title__container {
+    position: relative;
+    align-content: flex-start;
+}
+
+.title__container::after {
+    content: "";
+    background: url("assets/profile.png") no-repeat;
+    width: 100px; /* Defina a largura da imagem conforme necessário */
+    height: 100px; /* Defina a altura da imagem conforme necessário */
+    position: absolute;
+    top: 0;
+    right: -120px; /* Ajuste conforme necessário para posicionar a imagem à direita */
+}
+
+.title__profile-container {
+    width: 368px;
+    height: 368px;
+    margin: 0 auto;
+    overflow: hidden; /* Garante que a imagem circular seja exibida corretamente */
+    border-radius: 50%; /* Torna a div circular */
+}
+
+.title__profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para garantir que a imagem se ajuste ao contêiner */
+}
+
+
+.title__bio {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.title__subsection {
+    font-size: 18px;
+    color: #666;
+}
+
+.title__network {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.title__network__item {
+    margin-right: 16px;
+}
+
+.title__network__item:last-child {
+    margin-right: 0;
+}
+
+.title__network__item a {
+    color: var(--cor-de-link);
+    font-size: 16px;
+}
+
+.title__network__item a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Sessão About */
+section.about {
+    padding: 40px 0;
+}
+
+.about__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.about__paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.about__signature {
+    width: 120px;
+    margin-top: 24px;
+}
+
+
+/* Sessão de Habilidades */
+.skills {
+
+    max-width: 1440px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção horizontalmente */
+    opacity: 1; /* Torna a seção visível */
+    background-color: #F9F9F9; /* Cor de fundo suave */
+    padding: 40px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+.skills__title {
+    font-size: 24px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.skills__line {
+    display: flex; /* Exibe os itens em linha */
+    flex-wrap: wrap; /* Quebra a linha se necessário */
+    justify-content: space-between; /* Distribui uniformemente os itens */
+}
+
+.skills__box {
+    width: calc(25% - 20px); /* Largura de cada caixa (um quarto da largura total com espaço entre) */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #FFFFFF; /* Cor de fundo */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o conteúdo */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.skills__img {
+    max-width: 80px; /* Largura máxima da imagem */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.skills__name {
+    font-weight: bold; /* Negrito */
+}
+
+
+/* Sessão de Hobbies */
+.hobbies {
+    max-width: 1440px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção horizontalmente */
+    opacity: 3; /* Torna a seção visível */
+    background-color: #F9F9F9; /* Cor de fundo suave */
+    padding: 20px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    
+}
+
+.hobbies__title {
+    font-size: 24px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.hobbies__line {
+    display: flex; /* Exibe os itens em linha */
+    flex-wrap: wrap; /* Quebra a linha se necessário */
+    justify-content: space-between; /* Distribui uniformemente os itens */
+}
+
+.hobbies__box {
+    width: calc(25% - 20px); /* Largura de cada caixa (um quarto da largura total com espaço entre) */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #FFFFFF; /* Cor de fundo */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o conteúdo */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.hobbies__img {
+    max-width: 80px; /* Largura máxima da imagem */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.hobbies__name {
+    font-weight: bold; /* Negrito */
+}
+
+/* Experiência Acadêmica */
+.academic {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    flex-direction: column; /* Empilhar os elementos verticalmente */
+}
+
+.academic__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.academic__courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.academic__courses__box {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.academic__courses__item__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.academic__courses__item__subtitle {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Experiência */
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.experiencie__box {
+    width: calc(50% - 16px);
+    margin-bottom: 16px;
+    display: flex; /* Adiciona flexbox para alinhar os itens verticalmente */
+}
+.experiencie__box:nth-child(2) {
+    margin-bottom: -250px; /* Adiciona margem inferior negativa */
+}
+
+.experience__img_1,
+.experience__img_2 {
+    flex: 0 0 50%; /* Divide o espaço igualmente entre as imagens */
+}
+
+.experience__info {
+    flex: 0 0 50%; /* Divide o espaço igualmente entre as informações */
+    padding-left: 16px; /* Adiciona um espaçamento à esquerda */
+}
+
+
+section.experience {
+    padding: 50px 100;
+    margin-top: 50px;
+}
+
+.experience__section__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.experience__box {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.experience__img_1 {
+    max-width: 500px; /* Largura máxima da seção */
+    margin: 40px ; /* Centraliza a seção horizontalmente */
+    opacity: 1; /* Torna a seção visível */
+    padding: 10px 10px; /* Espaçamento interno */
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Cor de fundo de fallback */
+    background-image: url('https://imgur.com/NfGA2jN'); /* Imagem de fallback */
+    background-size: cover; /* Cubra toda a área de fundo */
+    background-position: center; /* Posicione a imagem de fundo no centro */
+}
+
+
+.experience__info {
+    flex: 1;
+}
+
+.experience__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    align-content: center;
+}
+
+.experience__text {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 16px;
+}
+
+.experience__description {
+    display: flex;
+    gap: 16px;
+}
+
+.experience__repo, .experience__demo {
+    font-size: 16px;
+}
+
+.experience__repo button, .experience__demo button {
+    background-color: var(--cor-destaque);
+    color: #FFF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.experience__repo button:hover, .experience__demo button:hover {
+    background-color: #FF6347;
+}
+
+/* Estilo para a seção de cursos */
+.section-courses {
+   
+    margin-bottom: 24px;
+    padding: 300px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-courses__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.course {
+    margin-bottom: 16px;
+}
+
+.course__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.course__duration {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 4px;
+}
+
+.course__link {
+    display: inline-block;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course__link:hover {
+    color: #0056b3;
+}
+
+
+/* Contato */
+section.formcontato {
+    padding: 40px 0;
+}
+
+.formcontato__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.formcontato__subtext {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.formcontato__img {
+    width: 300px;
+    margin-right: 40px;
+}
+
+.formcontato__form {
+    max-width: 400px;
+}
+
+.formcontato__input, .formcontato__textarea, .formcontato__botao {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.formcontato__textarea {
+    resize: vertical;
+}
+
+.formcontato__botao {
+    background-color: var(--cor-destaque);
+    color: #FFF;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formcontato__botao:hover {
+    background-color: #FF6347;
+}
+
+/* Estiliza o rodapé */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  footer a {
+    color: #fff;
+  }
+  
+  footer a:hover {
+    text-decoration: none;
+  }
+
+/* Chegou a hora de se desafiar com a responsividade, utilize como referência os breakpoints @media abaixo */
+
+/* Tablet */
+@media (min-width: 768px) {
+    /* Adicione estilos conforme necessário para cada sessão */
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+    /* Adicione estilos conforme necessário para cada sessão */
+}
