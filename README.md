@@ -2,7 +2,7 @@
 ---
 
 <p align="center" >
-     <img width="600" heigth="600" src="![image](https://github.com/Juniorlc2021/portifolio_pessoal/assets/92834847/2c061edd-302f-48f0-b6d0-b4d4e5ccd656)
+     <img width="600" heigth="600" src="[![image](https://github.com/Juniorlc2021/portifolio_pessoal/assets/92834847/2c061edd-302f-48f0-b6d0-b4d4e5ccd656)](https://imgur.com/pZoNQl2)
 ">
 </p>
 
