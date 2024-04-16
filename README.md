@@ -2,7 +2,7 @@
 ---
 
 <p align="center" >
-     <img width="600" heigth="600" src="https://imgur.com/pZoNQl2"</p>
+     <img width="600" heigth="600" src="[https://imgur.com/pZoNQl2](https://imgur.com/pZoNQl2)"</p>
 
 ###  Primeiros Passos:
 ---
